@@ -10,9 +10,11 @@
     <keywords>cordova,sub,webview</keywords>
     <repo>https://github.com/HikosakaRyo/cordova-sub-webview-plugin</repo>
 
+<!--
     <engines>
-      <engine name="cordova" version=">=6.0.0" />
+      <engine name="cordova" version=">=5.0.0" />
     </engines>
+-->
 
     <!-- android -->
     <!-- TODO >
