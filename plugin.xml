@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-subwebview"
+    version="0.0.1">
+
+    <name>SubWebview</name>
+    <author>Ryo HIKOSAKA</author>
+    <license>Apache 2.0</license>
+    <keywords>cordova,sub,webview</keywords>
+    <repo>https://github.com/HikosakaRyo/cordova-sub-webview-plugin</repo>
+
+    <engines>
+      <engine name="cordova" version=">=6.0.0" />
+    </engines>
+
+    <!-- android -->
+    <!-- TODO >
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/subwebview.js" name="subwebview">
+            <clobbers target="subwebview" />
+        </js-module>
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="subwebview">
+                <param name="ios-package" value="CDVSubwebview"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/SubWebview.h" />
+        <source-file src="src/ios/SubWebview.m" />
+    </platform>
+</plugin>
+
