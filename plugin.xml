@@ -10,14 +10,29 @@
     <keywords>cordova,sub,webview</keywords>
     <repo>https://github.com/HikosakaRyo/cordova-sub-webview-plugin</repo>
 
-<!--
     <engines>
       <engine name="cordova" version=">=5.0.0" />
     </engines>
--->
 
     <!-- android -->
-    <!-- TODO >
+    <platform name="android">
+        <js-module src="www/subwebview.js" name="subwebview">
+            <clobbers target="subwebview" />
+        </js-module>
+    	<config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET"/>
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+           <feature name="SubWebview">
+              <param name="android-package" value="org.apache.cordova.subwebview.SubWebview"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/SubWebview.java"
+                target-dir="src/org/apache/cordova/subwebview" />
+        <info>
+        </info>
+    </platform>
 
     <!-- ios -->
     <platform name="ios">
@@ -27,7 +42,7 @@
 
         <config-file target="config.xml" parent="/*">
             <feature name="subwebview">
-                <param name="ios-package" value="CDVSubwebview"/>
+                <param name="ios-package" value="Subwebview"/>
             </feature>
         </config-file>
 
