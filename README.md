@@ -1,5 +1,9 @@
 cordova-sub-webview-plugin
 ================
+# Description
+- Open a webview ( = sub-webview) in your Cordova application.
+- You can resize the height of sub-webview
+- You can place sub-webview at bottom or top in the window).
 
 # Install
 `cordova plugin add https://github.com/HikosakaRyo/cordova-sub-webview-plugin --save`
